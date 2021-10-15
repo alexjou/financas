@@ -5,24 +5,30 @@ export const Background = styled.View`
   flex: 1;
   background-color: #131313;
 `;
+export const Area = styled.ScrollView`
+  flex: 1;
+  background-color: #131313;
+`;
 export const Container = styled.KeyboardAvoidingView`
   justify-content: center;
 `;
 export const Input = styled.TextInput`
   height: 50px;
-  width: 90%;
+  width: 80%;
   background-color: rgba(255,255,255,0.9);
   margin-top: 20px;
   font-size: 17px;
   padding-left: 8px;
+  border-radius: 10px;
 `;
 export const SubmitButton = styled.TouchableOpacity`
   height: 50px;
-  width: 90%;
+  width: 80%;
   margin-top: 20px;
   align-items: center;
   justify-content: center;
   background-color: #00b94a;
+  border-radius: 10px;
 
 `;
 export const SubmitText = styled.Text`
