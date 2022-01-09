@@ -126,18 +126,18 @@ export default function Home() {
 
       <List
         showsVerticalScrollIndicator={false}
-        data={historico}
+        data={historico.reverse()}
         keyExtractor={item => item.key}
         renderItem={({ item }) => (<HistoricoList data={item} deleteItem={handleDelete} />)}
       />
 
-      {show && (
+      {/* {show && (
         <DatePicker
           onClose={handleClose}
           date={newDate}
           onChange={onChange}
         />
-      )}
+      )} */}
     </Background>
   );
 }

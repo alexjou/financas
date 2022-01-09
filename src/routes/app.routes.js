@@ -4,6 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Home from '../pages/Home';
 import New from '../pages/New';
 import Profile from '../pages/Profile'
+import Categories from '../pages/Categories'
 import CustomDrawer from '../components/CustomDrawer'
 
 const AppDrawer = createDrawerNavigator();
@@ -13,11 +14,12 @@ function AppRoutes() {
     <AppDrawer.Navigator
       drawerContent={(props) => <CustomDrawer {...props} />}
       drawerStyle={{
-        backgroundColor: '#171717'
+        backgroundColor: '#171717',
+        width: '50%',
       }}
       drawerContentOptions={{
         labelStyle: {
-          fontWeight: 'bold'
+          fontWeight: 'bold',
         },
         activeTintColor: '#FFF',
         activeBackgroundColor: '#00b94a',
@@ -25,12 +27,13 @@ function AppRoutes() {
         inactiveTintColor: '#DDD',
         itemStyle: {
           marginVertical: 5,
-        }
+        },
       }}
     >
       <AppDrawer.Screen name="Home" component={Home} />
       <AppDrawer.Screen name="Registrar" component={New} />
       <AppDrawer.Screen name="Perfil" component={Profile} />
+      <AppDrawer.Screen name="Categorias" component={Categories} />
     </AppDrawer.Navigator>
   );
 }

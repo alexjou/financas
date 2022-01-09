@@ -27,15 +27,13 @@ export const Saldo = styled.Text`
 export const Title = styled.Text`
   margin-left: 15px;
   color: #00b94a;
-  margin-bottom: 10px;
 `;
 
 export const List = styled.FlatList.attrs({
   marginHorizontal: 15,
   paddingBottom: 20,
 })`
-  padding-top: 15px;
-  background-color: #FFF;
+  padding-top: 15px;  
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   margin-left: 8px;
