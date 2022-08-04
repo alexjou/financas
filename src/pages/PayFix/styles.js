@@ -59,4 +59,18 @@ export const TabText = styled.Text`
   font-size: 13px;
   color: #fff;
   padding-bottom: 15px;
+
+`;
+export const DoubleComponent = styled.View`
+  width: 90%; 
+  flex-direction: row 
+`;
+export const PasteButton = styled.TouchableOpacity`
+  height: 50px;
+  width: 10%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: #00b94a;
+
 `;

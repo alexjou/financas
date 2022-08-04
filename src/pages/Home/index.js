@@ -12,6 +12,7 @@ import DatePicker from '../../components/DatePicker';
 
 
 import { Background, Container, Area, Name, Saldo, Title, List } from './styles';
+import { maskMoney } from '../../components/utils/utils';
 
 export default function Home() {
   const [historico, setHistorico] = useState([]);
@@ -33,7 +34,6 @@ export default function Home() {
         // .orderByChild('date').equalTo(format(newDate, 'dd/MM/yyyy')).limitToLast(10)
         .on('value', (snapshot) => {
           setHistorico([]);
-
           snapshot.forEach((childItem) => {
             let list = {
               key: childItem.key,
@@ -64,7 +64,7 @@ export default function Home() {
 
     Alert.alert(
       'Atenção',
-      `Você deseja excluir ${data.title}, do tipo ${data.tipo} - Valor: R$${data.valor.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}`,
+      `Você deseja excluir ${data.title}, do tipo ${data.tipo} - Valor: ${maskMoney(data.valor)}`,
       [
         {
           text: 'Cancelar',
@@ -115,7 +115,7 @@ export default function Home() {
           {/* {user && user.name} */}
           Saldo
           </Name>
-        <Saldo>R$ {saldo.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}</Saldo>
+        <Saldo>{maskMoney(saldo)}</Saldo>
       </Container>
       <Area>
         {/* <TouchableOpacity onPress={handleShowPicker}>

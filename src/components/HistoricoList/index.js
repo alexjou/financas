@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableWithoutFeedback } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import { maskMoney } from '../utils/utils';
 import { Container, Tipo, IconView, TipoText, ValorText, DateText, Title } from './styles';
 
 export default function HistoricoList({ data, deleteItem }) {
@@ -14,7 +15,7 @@ export default function HistoricoList({ data, deleteItem }) {
 
 
         <DateText>Dia: {data.date}</DateText>
-        <ValorText>R$ {data.valor.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')}</ValorText>
+        <ValorText>{maskMoney(data.valor)}</ValorText>
         <Tipo>
           <IconView tipo={data.tipo}>
             <Icon
