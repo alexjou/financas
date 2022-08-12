@@ -4,4 +4,5 @@ Um aplicativo feito para voce registrar suas movimentações com receitas(+) e d
 
 Feito em React Native  
 
+
 A very simple project, just to record what you earn and what you spend
